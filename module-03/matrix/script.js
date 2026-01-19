@@ -147,11 +147,19 @@ const btn10 = document.querySelector(".b-10");
 const out10 = document.querySelector(".out-10");
 
 btn10.onclick = fn10;
+
 function fn10() {
-  for (let i = 0; i <= 4; i++) {
-    for (let j = 0; j <= 50; j++) {
-      out10.innerHTML += `${j}_`;
+  let result = "";
+  for (let i = 0; i < 5; i++) {
+    for (let j = 1; j <= 10; j++) {
+      let result2 = i * 10 + j;
+      if (result2 < 10) {
+        result += "0" + result2 + "_";
+      } else {
+        result += result2 + "_";
+      }
     }
-    out10.innerHTML += "<br>";
+    result += "<br>";
   }
+  out10.innerHTML = result;
 }
