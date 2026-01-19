@@ -14,11 +14,25 @@ function fn1() {
 }
 
 // Task 2
+const btn2 = document.querySelector(".b-2");
+const out2 = document.querySelector(".out-2");
+
+btn2.onclick = fn2;
 const obj2 = {
   one: "hello",
   two: "mahai",
   five: "hi",
 };
+
+function fn2() {
+  let res2 = "";
+  for (const key in obj2) {
+    if (obj2[key] === "hi") {
+      res2 += obj2[key];
+    }
+  }
+  out2.innerHTML = res2;
+}
 
 // Task 3
 
@@ -37,18 +51,21 @@ const obj3 = {
 };
 
 function fn3() {
-  let res = "";
+  let res3 = "";
   for (const key in obj3) {
     if (obj3[key] === "hi") {
-      if (res !== "") res += " ";
-      res += obj3[key];
+      if (res3 !== "") res3 += " ";
+      res3 += obj3[key];
     }
   }
-  out3.innerHTML = res;
+  out3.innerHTML = res3;
 }
 
 // Task 4
+const btn4 = document.querySelector(".b-4");
+const out4 = document.querySelector(".out-4");
 
+btn4.onclick = fn4;
 const obj4 = {
   one: "hello",
   two: "mahai",
@@ -57,6 +74,13 @@ const obj4 = {
   odd: "hi",
   mix: "mix",
 };
+function fn4() {
+  let res4 = "";
+  for (const key in obj4) {
+    res4 = res4 + key + " " + obj4[key] + "<br>";
+  }
+  out4.innerHTML = res4;
+}
 
 // Task 5
 const obj5 = {
